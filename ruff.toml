@@ -98,8 +98,8 @@ ignore = [
 [lint.per-file-ignores]
 # Synthesis code: long straight-line DSP functions, kept flat for speed on the board
 "adafruit_moonshine_klatt/*.py" = ["PLR0911", "PLR0912", "PLR0913", "PLR0914", "PLR0915", "PLR0917"]
-# Viper kernel: one flat function by design, and viper types are clearer with plain assignment
-"src/klatt_viper.py" = ["PLR0912", "PLR0914", "PLR0915", "PLR6104"]
+# Turbo kernel: one flat function by design, and viper types are clearer with plain assignment
+"src/klatt_turbo.py" = ["PLR0912", "PLR0914", "PLR0915", "PLR6104"]
 
 [format]
 line-ending = "lf"

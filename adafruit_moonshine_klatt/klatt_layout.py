@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2026 Moonshine AI (original C++), Adafruit port
 # SPDX-License-Identifier: MIT
 """Layout of the int32 state array `st` and the int16 table `tab` shared by klatt_fixed.py
-and the native render_frame kernel. Copied from src/klatt_viper.py; plain ints so it
+and the native render_frame kernel. Copied from src/klatt_turbo.py; plain ints so it
 imports without the micropython module."""
 
 # Layout of the int32 state/coefficient array `st`, shared with klatt_fixed.py.

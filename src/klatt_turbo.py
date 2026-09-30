@@ -1,18 +1,18 @@
 # SPDX-FileCopyrightText: 2026 Moonshine AI (original C++), Adafruit port
 # SPDX-License-Identifier: MIT
-"""Fixed-point Klatt per-sample loop as one @micropython.viper function.
+"""Fixed-point Klatt per-sample loop as one turbo (@micropython.viper) function.
 
 Port of the per-sample body of klatt.cc RenderFrame. Filter coefficients and parameter ramps
 are prepared once per frame by klatt_fixed.py and passed in the int32 array `st`, which also
-holds the filter state between frames. Viper only speeds up integer code, so everything here
+holds the filter state between frames. Turbo only speeds up integer code, so everything here
 is int:
 
 - samples Q12 (1.0 = 4096), filter coefficients Q14, amplitudes Q15 (Q10 for voicing)
 - glottal phase Q28, pulse shape and soft-clip curve from int16 tables in `tab`
 - xorshift32 noise, same seed and draw order as the C++
 
-Calls between viper functions go through the runtime, so the filters are written out inline.
-Compile with: mpy-cross -march=armv7emsp klatt_viper.py
+Calls between turbo functions go through the runtime, so the filters are written out inline.
+Compile with: mpy-cross -march=armv7emsp klatt_turbo.py
 """
 
 import micropython

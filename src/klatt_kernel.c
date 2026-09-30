@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2026 Moonshine AI (original C++), Adafruit port
 // SPDX-License-Identifier: MIT
 //
-// Native module `klatt_kernel`: the fixed-point Klatt per-sample loop from klatt_viper.py in C.
+// Native module `klatt_kernel`: the fixed-point Klatt per-sample loop from klatt_turbo.py in C.
 // Same interface and arithmetic: render_frame(st, tab, out, n), with st an array('i') laid out
-// as in klatt_viper.py, tab the int16 pulse/soft-clip table and out an array('h').
-// Built with -fwrapv so signed int32 arithmetic wraps like viper ints; the RNG is uint32.
+// as in klatt_turbo.py, tab the int16 pulse/soft-clip table and out an array('h').
+// Built with -fwrapv so signed int32 arithmetic wraps like turbo (viper) ints; the RNG is uint32.
 
 #include "py/dynruntime.h"
 
-// Layout of the int32 state/coefficient array, as in klatt_viper.py.
+// Layout of the int32 state/coefficient array, as in klatt_turbo.py.
 enum {
     PHASE, PREV_G, JIT, SHIM, RNG,
     R1Y1, R1Y2, R2Y1, R2Y2, R3Y1, R3Y2, R4Y1, R4Y2, R5Y1, R5Y2,

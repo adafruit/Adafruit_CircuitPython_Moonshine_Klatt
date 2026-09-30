@@ -105,7 +105,7 @@ audio). Create it early, before other large allocations.
 Building the kernel
 ===================
 
-``src/klatt_viper.py`` is the kernel source, a ``@micropython.viper`` function.
+``src/klatt_turbo.py`` is the kernel source, a turbo (``@micropython.viper``) function.
 ``src/Makefile`` compiles it with ``mpy-cross -march`` for each architecture into
 ``adafruit_moonshine_klatt/klatt_kernel.<arch>.mpy``:
 
