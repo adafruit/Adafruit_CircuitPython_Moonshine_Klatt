@@ -1,17 +1,10 @@
 Simple test
 ------------
 
-Ensure your device works with this simple test.
+Ensure your device works with this simple test. Uncomment the I2SOut lines for your board:
+Feather RP2040 or ESP32-S3 with a MAX98357A (default), QT Py ESP32-S3 with an Audio BFF, or
+Feather RP2040 Prop-Maker.
 
 .. literalinclude:: ../examples/moonshine_klatt_simpletest.py
     :caption: examples/moonshine_klatt_simpletest.py
-    :linenos:
-
-Feather RP2040 Prop-Maker
--------------------------
-
-Speak through the Prop-Maker's built-in I2S amplifier.
-
-.. literalinclude:: ../examples/moonshine_klatt_prop_maker.py
-    :caption: examples/moonshine_klatt_prop_maker.py
     :linenos:
