@@ -2,8 +2,8 @@
 # SPDX-License-Identifier: MIT
 """Speak a few phrases through an I2S amplifier.
 
-Uncomment the I2SOut lines for your board. The default is a Feather RP2040 or Feather ESP32-S3
-with a MAX98357A amp: BCLK to D9, LRC to D10, DIN to D11.
+Uncomment the I2SOut lines for your board. The default is a Feather RP2040, RP2350 or ESP32-S3
+with a MAX98357A amp: BCLK to A0, LRC to A1, DIN to A2.
 """
 
 import time
@@ -13,9 +13,9 @@ import board
 
 import adafruit_moonshine_klatt as speech
 
-# Feather RP2040 or Feather ESP32-S3 with a MAX98357A. On the RP2040, bit clock and word select
-# must be consecutive GPIOs: D9 and D10.
-audio = audiobusio.I2SOut(board.D9, board.D10, board.D11)
+# Feather RP2040, RP2350 or ESP32-S3 with a MAX98357A. On the RP2040 and RP2350, bit clock and
+# word select must be consecutive GPIOs: A0 and A1 are GPIO26 and GPIO27.
+audio = audiobusio.I2SOut(board.A0, board.A1, board.A2)
 
 # QT Py ESP32-S3 with an Audio BFF.
 # audio = audiobusio.I2SOut(board.A3, board.A2, board.A1)
